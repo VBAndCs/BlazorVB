@@ -10,27 +10,68 @@ Namespace [Shared]
         Private Sub __RazorDirectiveTokenHelpers__()
         End Sub
         Private Shared __o As Object = Nothing
-        Protected Overrides Sub BuildRenderTree(ByVal __builder As Rendering.RenderTreeBuilder)
-            __o = EventCallback.Factory.Create(Of MouseEventArgs)(Me, New Action(AddressOf ToggleNavMenu))
-            __o = ""
-            __o = ""
-            __o = CompilerServices.RuntimeHelpers.TypeCheck(NavLinkMatch.All)
-            __builder.AddAttribute(-1, "ChildContent", CType(Sub(__builder2)
-                                                             End Sub, RenderFragment))
-            __o = GetType(NavLink)
-            __o = ""
-            __o = ""
-            __builder.AddAttribute(-1, "ChildContent", CType(Sub(__builder2)
-                                                             End Sub, RenderFragment))
-            __o = GetType(NavLink)
-            __o = ""
-            __o = ""
-            __builder.AddAttribute(-1, "ChildContent", CType(Sub(__builder2)
-                                                             End Sub, RenderFragment))
-            __o = GetType(NavLink)
-            __o = NavMenuCssClass
-            __o = EventCallback.Factory.Create(Of MouseEventArgs)(Me, New Action(AddressOf ToggleNavMenu))
+    
+ Protected Overrides Sub BuildRenderTree(ByVal __builder As Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+            __builder.OpenElement(0, "div")
+            __builder.AddAttribute(1, "class", "top-row pl-4 navbar navbar-dark")
+            __builder.AddAttribute(2, "b-i797s6suhi")
+            __builder.AddMarkupContent(3, "<a class=""navbar-brand"" href b-i797s6suhi>WebApplication3</a>" & vbCrLf & "    ")
+            __builder.OpenElement(4, "button")
+            __builder.AddAttribute(5, "class", "navbar-toggler")
+            __builder.AddAttribute(6, "onclick",
+                                   EventCallback.Factory.Create(Of MouseEventArgs)(Me, AddressOf ToggleNavMenu))
+            __builder.AddAttribute(7, "b-i797s6suhi")
+            __builder.AddMarkupContent(8, "<span class=""navbar-toggler-icon"" b-i797s6suhi></span>")
+            __builder.CloseElement()
+            __builder.CloseElement()
+            __builder.AddMarkupContent(9, vbCrLf & vbCrLf)
+            __builder.OpenElement(10, "div")
+            __builder.AddAttribute(11, "class", NavMenuCssClass)
+            __builder.AddAttribute(12, "onclick", EventCallback.Factory.Create(Of MouseEventArgs)(Me, AddressOf ToggleNavMenu))
+            __builder.AddAttribute(13, "b-i797s6suhi")
+            __builder.OpenElement(14, "ul")
+            __builder.AddAttribute(15, "class", "nav flex-column")
+            __builder.AddAttribute(16, "b-i797s6suhi")
+            __builder.OpenElement(17, "li")
+            __builder.AddAttribute(18, "class", "nav-item px-3")
+            __builder.AddAttribute(19, "b-i797s6suhi")
+            __builder.OpenComponent(Of Microsoft.AspNetCore.Components.Routing.NavLink)(20)
+            __builder.AddAttribute(21, "class", "nav-link")
+            __builder.AddAttribute(22, "href", "")
+            __builder.AddAttribute(23, "Match", Microsoft.AspNetCore.Components.CompilerServices.RuntimeHelpers.TypeCheck(Of Microsoft.AspNetCore.Components.Routing.NavLinkMatch)(NavLinkMatch.All))
+            __builder.AddAttribute(24, "ChildContent", CType((Sub(__builder2)
+                                                                  __builder2.AddMarkupContent(25, "<span class=""oi oi-home"" aria-hidden=""true"" b-i797s6suhi></span> Home" & vbCrLf & "            ")
+                                                              End Sub), Microsoft.AspNetCore.Components.RenderFragment))
+            __builder.CloseComponent()
+            __builder.CloseElement()
+            __builder.AddMarkupContent(26, vbCrLf & "        ")
+            __builder.OpenElement(27, "li")
+            __builder.AddAttribute(28, "class", "nav-item px-3")
+            __builder.AddAttribute(29, "b-i797s6suhi")
+            __builder.OpenComponent(Of Microsoft.AspNetCore.Components.Routing.NavLink)(30)
+            __builder.AddAttribute(31, "class", "nav-link")
+            __builder.AddAttribute(32, "href", "counter")
+            __builder.AddAttribute(33, "ChildContent", CType((Sub(__builder2)
+                                                                  __builder2.AddMarkupContent(34, "<span class=""oi oi-plus"" aria-hidden=""true"" b-i797s6suhi></span> Counter" & vbCrLf & "            ")
+                                                              End Sub), Microsoft.AspNetCore.Components.RenderFragment))
+            __builder.CloseComponent()
+            __builder.CloseElement()
+            __builder.AddMarkupContent(35, vbCrLf & "        ")
+            __builder.OpenElement(36, "li")
+            __builder.AddAttribute(37, "class", "nav-item px-3")
+            __builder.AddAttribute(38, "b-i797s6suhi")
+            __builder.OpenComponent(Of Microsoft.AspNetCore.Components.Routing.NavLink)(39)
+            __builder.AddAttribute(40, "class", "nav-link")
+            __builder.AddAttribute(41, "href", "fetchdata")
+            __builder.AddAttribute(42, "ChildContent", CType((Sub(__builder2)
+                                                                  __builder2.AddMarkupContent(43, "<span class=""oi oi-list-rich"" aria-hidden=""true"" b-i797s6suhi></span> Fetch data" & vbCrLf & "            ")
+                                                              End Sub), Microsoft.AspNetCore.Components.RenderFragment))
+            __builder.CloseComponent()
+            __builder.CloseElement()
+            __builder.CloseElement()
+            __builder.CloseElement()
         End Sub
+    
         Private collapseNavMenu As Boolean = True
 
         Private ReadOnly Property NavMenuCssClass As String
