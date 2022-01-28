@@ -11,7 +11,7 @@ Namespace [Shared]
         End Sub
         Private Shared __o As Object = Nothing
     
- Protected Overrides Sub BuildRenderTree(ByVal __builder As Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+        Protected Overrides Sub BuildRenderTree(ByVal __builder As Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
             __builder.OpenElement(0, "div")
             __builder.AddAttribute(1, "class", "top-row pl-4 navbar navbar-dark")
             __builder.AddAttribute(2, "b-i797s6suhi")
